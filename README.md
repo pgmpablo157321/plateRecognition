@@ -1,4 +1,4 @@
-# plateRecognition
+# Plate Recognition
 
 The goal of this project is to make a simple script that is capable of recognizing colombian car plates in a somewhat controlled enviroment
 
