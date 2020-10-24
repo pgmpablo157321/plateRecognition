@@ -133,7 +133,7 @@ class plateDivision():
         arr[:,:,1] = y_pred.reshape((h,w))*255
         arr[:,:,2] = y_pred.reshape((h,w))*255
 
-        arr = self.dilate_erode(arr, (2,1),1,(2,1),1)
+        arr = self.dilate_erode(arr, (2,1),5,(2,1),1)
         #arr = self.erode_dilate(arr, (1,2),1,(1,2),1)
         img_cont = arr[:,:,0].astype(np.uint8)
         cnt, hie = cv2.findContours(img_cont, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[-2:]
@@ -181,7 +181,7 @@ class digitClasification():
 
 
 
-path = '../imagenes/img_25.jpg'
+path = '../imagenes/img_33.jpg'
 pDet = plateDetection(path)
 img = cv2.imread(path)
 img = pDet.set_size(img)
